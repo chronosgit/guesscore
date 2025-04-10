@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router';
-import Header from '@/components/layout/Header';
-import MobileBottomMenu from '@/components/layout/MobileBottomMenu';
+import Header from '@/components/layout/header';
+import MobileBottomMenu from '@/components/layout/mobile_bottom_menu';
 
 export default function DefaultLayoutWrapper() {
 	return (
