@@ -4,12 +4,14 @@ import MobileBottomMenu from '@/components/layout/mobile_bottom_menu';
 
 export default function DefaultLayoutWrapper() {
 	return (
-		<main className="mx-auto max-w-[75rem]">
+		<>
 			<Header />
 
-			<Outlet />
+			<main className="mx-auto max-w-[75rem]">
+				<Outlet />
+			</main>
 
 			<MobileBottomMenu />
-		</main>
+		</>
 	);
 }
