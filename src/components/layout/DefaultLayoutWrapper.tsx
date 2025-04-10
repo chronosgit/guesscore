@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router';
 import Header from '@/components/layout/Header';
+import MobileBottomMenu from '@/components/layout/MobileBottomMenu';
 
 export default function DefaultLayoutWrapper() {
 	return (
@@ -7,6 +8,8 @@ export default function DefaultLayoutWrapper() {
 			<Header />
 
 			<Outlet />
+
+			<MobileBottomMenu />
 		</main>
 	);
 }
