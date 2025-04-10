@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import { Link } from 'react-router';
+import ActionElementWrapper from '@/components/layout/header/ActionElementWrapper';
 
 interface Props {
 	to: string;
@@ -15,10 +16,12 @@ export default function HeaderMiddleElement({
 	children,
 }: Props) {
 	return (
-		<Link to={to} target={linkTarget} className="flex items-center gap-1">
-			{children}
+		<ActionElementWrapper>
+			<Link to={to} target={linkTarget} className="flex items-center gap-1">
+				{children}
 
-			<span className="font-medium">{label}</span>
-		</Link>
+				<span className="font-medium">{label}</span>
+			</Link>
+		</ActionElementWrapper>
 	);
 }

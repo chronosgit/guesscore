@@ -8,6 +8,7 @@ import {
 	IconMusicFill,
 } from '@/components/ui/icons';
 import useScreenBreakpoints from '@/hooks/useScreenBreakpoints';
+import ActionElementWrapper from './ActionElementWrapper';
 
 export default function Header() {
 	const { isScreenMD } = useScreenBreakpoints();
@@ -40,7 +41,9 @@ export default function Header() {
 				</div>
 
 				<button type="button">
-					<IconMenuFill className="max-w-5" />
+					<ActionElementWrapper className="!p-1.5">
+						<IconMenuFill className="max-w-5" />
+					</ActionElementWrapper>
 				</button>
 			</div>
 		</header>
