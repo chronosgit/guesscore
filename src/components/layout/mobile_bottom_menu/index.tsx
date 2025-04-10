@@ -13,7 +13,7 @@ export default function MobileBottomMenu() {
 	if (isScreenMD) return;
 
 	return (
-		<div className="text-primary-200 bg-background-400 2xs:grid-cols-4 2xs:grid-rows-1 fixed right-0 bottom-0 left-0 grid grid-cols-2 grid-rows-2 items-center gap-1 p-1">
+		<div className="text-primary-300 bg-background-400 2xs:grid-cols-4 2xs:grid-rows-1 fixed right-0 bottom-0 left-0 grid grid-cols-2 grid-rows-2 items-center gap-1 p-1">
 			<MenuElement text="Features" to="/features" isLink>
 				<IconLayersFill className="max-w-6" />
 			</MenuElement>

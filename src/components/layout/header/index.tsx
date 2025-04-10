@@ -15,32 +15,34 @@ export default function Header() {
 	if (!isScreenMD) return;
 
 	return (
-		<header className="bg-background-400 mb-4 flex items-center justify-between px-3 py-2">
-			<Link to="/">
-				<Logo className="max-w-6" />
-			</Link>
+		<header className="text-primary-300 bg-background-400 mb-4 px-3 py-2">
+			<div className="mx-auto flex max-w-[75rem] items-center justify-between">
+				<Link to="/">
+					<Logo className="max-w-6" />
+				</Link>
 
-			<div className="flex items-center gap-6">
-				<HeaderMiddleElement to="/features" label="Features">
-					<IconLayersFill className="max-w-5" />
-				</HeaderMiddleElement>
+				<div className="flex items-center gap-6">
+					<HeaderMiddleElement to="/features" label="Features">
+						<IconLayersFill className="max-w-5" />
+					</HeaderMiddleElement>
 
-				<HeaderMiddleElement to="/resources" label="Resources">
-					<IconEyeglassLine className="max-w-5" />
-				</HeaderMiddleElement>
+					<HeaderMiddleElement to="/resources" label="Resources">
+						<IconEyeglassLine className="max-w-5" />
+					</HeaderMiddleElement>
 
-				<HeaderMiddleElement
-					to="https://musescore.com/"
-					label="Partitures"
-					linkTarget="_blank"
-				>
-					<IconMusicFill className="max-w-5" />
-				</HeaderMiddleElement>
+					<HeaderMiddleElement
+						to="https://musescore.com/"
+						label="Partitures"
+						linkTarget="_blank"
+					>
+						<IconMusicFill className="max-w-5" />
+					</HeaderMiddleElement>
+				</div>
+
+				<button type="button">
+					<IconMenuFill className="max-w-5" />
+				</button>
 			</div>
-
-			<button type="button">
-				<IconMenuFill className="max-w-5" />
-			</button>
 		</header>
 	);
 }
