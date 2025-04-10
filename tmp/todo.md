@@ -1,6 +1,5 @@
 # Todo
 
-1. Set up React-Router.
-2. Define business features.
-3. Set up color scheme (work with tailwind).
-4. Define development plan.
+1. Define business features.
+2. Set up color scheme (work with tailwind).
+3. Define development plan.
