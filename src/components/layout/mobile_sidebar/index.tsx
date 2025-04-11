@@ -77,10 +77,6 @@ export default function MobileSidebar() {
 						))}
 					</ul>
 				</FeatureDropdown>
-
-				<FeatureDropdown featureName="Hotkeys">
-					<p>Under development...</p>
-				</FeatureDropdown>
 			</div>
 		</div>
 	);
