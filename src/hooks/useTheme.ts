@@ -1,16 +1,18 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { ThemeType } from '@/interfaces/ThemeType';
 
 export default function useTheme() {
+	const [theme, setTheme] = useState<ThemeType>('light');
+
 	const switchTheme = (newTheme: ThemeType) => {
 		if (!['light', 'dark'].includes(newTheme)) return;
+
+		setTheme(newTheme);
 
 		localStorage.setItem('theme', newTheme);
 
 		const root = document.documentElement;
-
 		root.removeAttribute('data-theme');
-
 		root.setAttribute('data-theme', newTheme);
 	};
 
@@ -49,5 +51,5 @@ export default function useTheme() {
 		}
 	}, []);
 
-	return { switchTheme, toggleTheme };
+	return { theme, switchTheme, toggleTheme };
 }

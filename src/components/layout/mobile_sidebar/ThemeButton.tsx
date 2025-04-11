@@ -8,7 +8,7 @@ export default function ThemeButton() {
 	return (
 		<button
 			type="button"
-			className="action-color-rise flex items-center gap-1"
+			className="action-color-rise flex items-center gap-0.5"
 			onClick={themeCtx?.toggleTheme}
 		>
 			{themeCtx?.theme === 'dark' ? (
@@ -17,7 +17,7 @@ export default function ThemeButton() {
 				<IconSunFogFill className="max-w-5" />
 			)}
 
-			<span>Theme</span>
+			<span className="text-sm font-medium">Theme</span>
 		</button>
 	);
 }

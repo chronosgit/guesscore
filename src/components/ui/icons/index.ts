@@ -7,3 +7,4 @@ export { default as IconLayersFill } from './LayersFill';
 export { default as IconMenuFill } from './MenuFill';
 export { default as IconMoonStarsFill } from './MoonStarsFill';
 export { default as IconMusicFill } from './MusicFill';
+export { default as IconSunFogFill } from './SunFogFill';
