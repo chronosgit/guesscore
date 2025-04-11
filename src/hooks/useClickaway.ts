@@ -9,7 +9,7 @@ export default function useClickaway(
 
 		const target = e.target as HTMLElement | null;
 
-		if (ref.current?.contains(target)) onClickaway();
+		if (!ref.current?.contains(target)) onClickaway();
 	};
 
 	useEffect(() => {

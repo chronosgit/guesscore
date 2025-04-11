@@ -1,12 +1,9 @@
 import { useEffect } from 'react';
-import { z } from 'zod';
 import { ThemeType } from '@/interfaces/ThemeType';
 
-export const themeSchema = z.enum(['light', 'dark']);
-
-export function useTheme() {
+export default function useTheme() {
 	const switchTheme = (newTheme: ThemeType) => {
-		if (!themeSchema.safeParse(newTheme).success) return;
+		if (!['light', 'dark'].includes(newTheme)) return;
 
 		localStorage.setItem('theme', newTheme);
 
@@ -17,10 +14,29 @@ export function useTheme() {
 		root.setAttribute('data-theme', newTheme);
 	};
 
+	const toggleTheme = () => {
+		const theme = document.documentElement.getAttribute('data-theme');
+
+		switch (theme) {
+			case 'light':
+				switchTheme('dark');
+
+				break;
+			case 'dark':
+				switchTheme('light');
+
+				break;
+			default:
+				switchTheme('light');
+
+				break;
+		}
+	};
+
 	useEffect(() => {
 		const savedTheme = localStorage.getItem('theme');
 
-		if (!themeSchema.safeParse(savedTheme).success) return;
+		if (!['light', 'dark'].includes(String(savedTheme))) return;
 
 		if (savedTheme) {
 			switchTheme(savedTheme as ThemeType);
@@ -33,5 +49,5 @@ export function useTheme() {
 		}
 	}, []);
 
-	return { switchTheme };
+	return { switchTheme, toggleTheme };
 }

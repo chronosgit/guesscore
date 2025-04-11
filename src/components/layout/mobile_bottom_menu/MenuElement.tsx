@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { MouseEvent, PropsWithChildren } from 'react';
 import { Link } from 'react-router';
 
 interface Props {
@@ -7,7 +7,7 @@ interface Props {
 	linkTarget?: '_blank' | '_self' | '_parent' | '_top' | string;
 	isLink?: boolean;
 	isButton?: boolean;
-	children: ReactNode;
+	onClick?: (e: MouseEvent) => unknown;
 }
 
 export default function MenuElement({
@@ -16,14 +16,15 @@ export default function MenuElement({
 	linkTarget,
 	isLink,
 	isButton,
+	onClick,
 	children,
-}: Props) {
+}: PropsWithChildren<Props>) {
 	if (isLink) {
 		return (
 			<Link
 				to={to ?? ''}
 				target={linkTarget}
-				className="flex flex-col items-center"
+				className="action-color-rise flex flex-col items-center"
 			>
 				{children}
 
@@ -33,8 +34,18 @@ export default function MenuElement({
 	}
 
 	if (isButton) {
+		const onBtnClick = (e: MouseEvent) => {
+			if (typeof onClick !== 'function') return;
+
+			onClick(e);
+		};
+
 		return (
-			<button type="button" className="flex flex-col items-center">
+			<button
+				type="button"
+				className="action-color-rise flex flex-col items-center"
+				onClick={onBtnClick}
+			>
 				{children}
 
 				<span className="text-xs font-semibold capitalize">{text}</span>
