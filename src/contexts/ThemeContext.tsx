@@ -1,9 +1,11 @@
 import { createContext, ReactNode } from 'react';
-import { useTheme } from '@/hooks/useTheme';
+import useTheme from '@/hooks/useTheme';
 import { ThemeType } from '@/interfaces/ThemeType';
 
 type ThemeContextType = {
+	theme: ThemeType;
 	switchTheme: (newTheme: ThemeType) => void;
+	toggleTheme: () => void;
 };
 
 interface ProviderProps {
@@ -13,10 +15,10 @@ interface ProviderProps {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 const ThemeContextProvider = ({ children }: ProviderProps) => {
-	const { switchTheme } = useTheme();
+	const { theme, switchTheme, toggleTheme } = useTheme();
 
 	return (
-		<ThemeContext.Provider value={{ switchTheme }}>
+		<ThemeContext.Provider value={{ theme, switchTheme, toggleTheme }}>
 			{children}
 		</ThemeContext.Provider>
 	);

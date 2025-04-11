@@ -13,6 +13,18 @@
 	--theme-color-primary-900: black;
 	--theme-color-primary-950: black;
 
+	--theme-color-secondary-50: #fdf4ff;
+	--theme-color-secondary-100: #fae8ff;
+	--theme-color-secondary-200: #f6cfff;
+	--theme-color-secondary-300: #f4a8ff;
+	--theme-color-secondary-400: #ed6aff;
+	--theme-color-secondary-500: #e12afb;
+	--theme-color-secondary-600: #c800de;
+	--theme-color-secondary-700: #a800b7;
+	--theme-color-secondary-800: #8a0194;
+	--theme-color-secondary-900: #721378;
+	--theme-color-secondary-950: #4b004f;
+
 	--theme-color-background-50: #6b6b6b;
 	--theme-color-background-100: #8a8a8a;
 	--theme-color-background-200: #a5a5a5;
@@ -38,6 +50,18 @@
 	--theme-color-primary-800: white;
 	--theme-color-primary-900: white;
 	--theme-color-primary-950: white;
+
+	--theme-color-secondary-50: #f5f3ff;
+	--theme-color-secondary-100: #ede9fe;
+	--theme-color-secondary-200: #ddd6ff;
+	--theme-color-secondary-300: #c4b3ff;
+	--theme-color-secondary-400: #a684ff;
+	--theme-color-secondary-500: #8e51ff;
+	--theme-color-secondary-600: #7f22fe;
+	--theme-color-secondary-700: #7008e7;
+	--theme-color-secondary-800: #5d0ec0;
+	--theme-color-secondary-900: #4d179a;
+	--theme-color-secondary-950: #2f0d68;
 
 	--theme-color-background-50: #6c6c6e;
 	--theme-color-background-100: #48484a;
@@ -70,6 +94,18 @@
 	--color-primary-900: var(--theme-color-primary-900);
 	--color-primary-950: var(--theme-color-primary-950);
 
+	--color-secondary-50: var(--theme-color-secondary-50);
+	--color-secondary-100: var(--theme-color-secondary-100);
+	--color-secondary-200: var(--theme-color-secondary-200);
+	--color-secondary-300: var(--theme-color-secondary-300);
+	--color-secondary-400: var(--theme-color-secondary-400);
+	--color-secondary-500: var(--theme-color-secondary-500);
+	--color-secondary-600: var(--theme-color-secondary-600);
+	--color-secondary-700: var(--theme-color-secondary-700);
+	--color-secondary-800: var(--theme-color-secondary-800);
+	--color-secondary-900: var(--theme-color-secondary-900);
+	--color-secondary-950: var(--theme-color-secondary-950);
+
 	--color-background-50: var(--theme-color-background-50);
 	--color-background-100: var(--theme-color-background-100);
 	--color-background-200: var(--theme-color-background-200);
@@ -90,5 +126,15 @@
 
 	button {
 		@apply cursor-pointer;
+	}
+}
+
+@layer utilities {
+	.shadow-overlay {
+		box-shadow: 0 0 1rem calc(100vw + 100vh) rgba(0, 0, 0, 0.5);
+	}
+
+	.action-color-rise {
+		@apply hover:text-secondary-400 focus-visible:text-secondary-400 cursor-pointer duration-300 hover:-translate-y-[1px] focus-visible:-translate-y-[1px];
 	}
 }

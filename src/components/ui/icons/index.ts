@@ -1,4 +1,10 @@
+export { default as IconArrowsDownLine } from './ArrowsDownLine';
+export { default as IconArrowsUpLine } from './ArrowsUpLine';
+export { default as IconCloseFill } from './CloseFill';
 export { default as IconEyeglassLine } from './EyeglassLine';
+export { default as IconGithubFill } from './GithubFill';
 export { default as IconLayersFill } from './LayersFill';
 export { default as IconMenuFill } from './MenuFill';
+export { default as IconMoonStarsFill } from './MoonStarsFill';
 export { default as IconMusicFill } from './MusicFill';
+export { default as IconSunFogFill } from './SunFogFill';

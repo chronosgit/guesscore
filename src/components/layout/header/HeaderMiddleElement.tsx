@@ -17,7 +17,11 @@ export default function HeaderMiddleElement({
 }: Props) {
 	return (
 		<ActionElementWrapper>
-			<Link to={to} target={linkTarget} className="flex items-center gap-1">
+			<Link
+				to={to}
+				target={linkTarget}
+				className="action-color-rise flex items-center gap-1"
+			>
 				{children}
 
 				<span className="font-medium">{label}</span>
