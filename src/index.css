@@ -39,11 +39,11 @@
 }
 
 [data-theme='dark'] {
-	--theme-color-primary-50: rgb(41, 41, 41);
-	--theme-color-primary-100: rgb(75, 75, 75);
-	--theme-color-primary-200: rgb(124, 124, 124);
-	--theme-color-primary-300: rgb(160, 160, 160);
-	--theme-color-primary-400: rgb(202, 202, 202);
+	--theme-color-primary-50: #292929;
+	--theme-color-primary-100: #4b4b4b;
+	--theme-color-primary-200: #7c7c7c;
+	--theme-color-primary-300: #a0a0a0;
+	--theme-color-primary-400: #cacaca;
 	--theme-color-primary-500: white;
 	--theme-color-primary-600: white;
 	--theme-color-primary-700: white;
