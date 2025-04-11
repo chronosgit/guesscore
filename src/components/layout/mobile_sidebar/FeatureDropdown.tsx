@@ -12,6 +12,7 @@ export default function FeatureDropdown({ featureName, children }: Props) {
 	return (
 		<div className="bg-background-300 relative rounded-md px-3 py-1.5">
 			<button
+				type="button"
 				className="flex w-full items-center justify-between"
 				onClick={toggleDropdown}
 			>
